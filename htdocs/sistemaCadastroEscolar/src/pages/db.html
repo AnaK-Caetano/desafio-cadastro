@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Dashboard | Cadastro</title>
+  <link rel="stylesheet" href="../css/dashboard-style.css" />
+ 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<body>
+  <header>
+    <nav class="navbar-container">
+      <h1>DASHBOARD</h1>
+      <div class="usuario-card">
+        <h2 class="usuario">Professora</h2>
+        <img class="usuario-img" src="../assets/avatar.jpg" width="200px" height="200px">
+        <div class="logout-container">  
+          </ul>
+            <li>
+              <a href="../../index.html" id="logout" class="logout">
+                <i class="fas fa-sign-out-alt"></i>
+                <span class="nav-item">Sair</span>
+              </a>
+            </li>
+          <ul>    
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section class="dashboard-container">
+      <h2 class=" dash-grid texto-recepcao">Seja Bem vindo</h2>
+     
+      <h1 class=" dash-grid texto-info">Informações</h1>
+      <div class=" dash-grid info-alunos">
+        <div class="info-container">
+          <h4>Alunos vinculados</h4>
+          <p>12</p>
+        </div>
+      </div>
+      <div class=" dash-grid info-escolas">
+        <div class="info-container">
+          <h4>Escolas vinculadas</h4>
+          <p>12</p>
+        </div>
+      </div>
+      <h1 class=" dash-grid texto-acao">Ações</h1>
+
+      <div class=" dash-grid card-cadastro-aluno">
+        <div class="acao-container">
+          <i class='bx bxs-graduation'></i>
+          <h4>Cadastrar aluno</h4>
+          <button onclick="abrirCadastroAluno()">Cadastre agora</button>
+        </div>
+      </div>
+      <div class=" dash-grid card-cadastro-escola">
+        <div class="acao-container">
+          <i class='bx bxs-school icon-card'></i>
+          <h4>Cadastrar escola</h4>
+          <button onclick="abrirCadastroEscolas()">Cadastre agora</button>
+        </div>
+      </div>
+      <div class=" dash-grid card-lista-aluno">
+        <div class="acao-container">
+          <i class='bx bxs-graduation'></i>
+          <h4>Alunos cadastrados</h4>
+          <button onclick="listarAlunos()">Listar alunos</button>
+        </div>
+      </div>
+      <div class=" dash-grid card-lista-escola">
+        <div class="acao-container">
+          <i class='bx bxs-school icon-card'></i>
+          <h4>Escolas cadastradas</h4>
+          <button onclick="listarEscolas()">Listar escolas</button>
+        </div>
+      </div>
+      <div class="dash-grid table-container">
+        <div class="tabela-titulo">
+          <h1>Lista de professores na plataforma</h1>
+        </div>
+        <table class="tabela">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Nome</th>
+              <th>CPF</th>
+              <th>Data de nascimento</th>
+              <th>Escola</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>01</td>
+              <td>Maria do Rosário</td>
+              <td>13246579859</td>
+              <td>24-11-2009</td>
+              <td>ETE PORTO DIGITAL</td>
+              <td><button type="submit">Visualizar</button></td>
+            </tr>
+            <tr>
+              <td>02</td>
+              <td>Sandra Chacon</td>
+              <td>13246579859</td>
+              <td>24-11-2009</td>
+              <td>ETE PORTO DIGITAL</td>
+              <td><button type="submit">Visualizar</button></td>
+            </tr>
+            <tr>
+              <td>03</td>
+              <td>Pedro Albino</td>
+              <td>13246579859</td>
+              <td>24-11-2009</td>
+              <td>ETE CICERO DIAS</td>
+              <td><button type="submit">Visualizar</button></td>
+            </tr>
+            <tr>
+              <td>04</td>
+              <td>João Carvalho</td>
+              <td>13246579859</td>
+              <td>24-11-2009</td>
+              <td>ETE CÍCERO DIAS</td>
+              <td><button type="submit">Visualizar</button></td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
+    </section>
+  </main>
+
+  <script src="../js/logout.js"></script>
+  <script src="../js/dashboard.js"></script>
+</body>
+</html>

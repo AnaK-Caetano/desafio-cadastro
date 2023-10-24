@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Cadastro </title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- links login -->
+    <link rel="stylesheet" href="src/css/login.css">
+
+</head>
+<body>
+    <main>
+        <div class="login-container" id="login-container">
+            <div class="form-container">
+                <form action="login.php" method="post" class="form form-login">
+                    <h2 class="form-title">Entrar</h2>
+                    <div class="form-input-container">
+                        <input type="text" name="cpf" class="form-input" placeholder="CPF" required>
+                        <input type="password" name="senha" class="form-input" placeholder="Senha" required>
+                    </div>
+                    <button type="submit" class="form-button">Entrar</button>
+                    <p class="mobile-text">
+                        Não tem conta?
+                        <a href="#" id="open-register-mobile">Registre-se</a>
+                    </p>
+                </form>
+                <form id="validar" action="registro.php" method="post" class="form form-register">
+                    <h2 class="form-title">Criar Conta</h2>
+                    <div class="form-input-container">                            
+                        <input type="text" name="nome" class="form-input" placeholder="Nome Completo" required>
+                        <input type="text" name="cpf" class="form-input" placeholder="CPF" required>
+                        <input type="date" name="datanasc" class="form-input" placeholder="Data de nascimento" required>
+                        <input type="text" name="escola" class="form-input" placeholder="Escola vinculada" required>
+                        <input type="password" name="senha" class="form-input" placeholder="Senha" required>
+                    </div>
+                <button type="submit" class="form-button">Cadastrar</button>
+                <p class="mobile-text">
+                    Já tem conta?
+                    <a href="#" id="open-login-mobile">Login</a>
+                </p>
+            </form>
+                   
+            </div>
+            <div class="overlay-container">
+                <div class="overlay">
+                    <h2 class="form-title form-title-light">Já tem conta?</h2>
+                    <p class="form-text">Para entrar na plataforma faça login com suas informações</p>
+                    <button class="form-button form-button-light" id="open-login">Entrar</button>
+                </div>
+                <div class="overlay">
+                    <h2 class="form-title form-title-light">Seja bem-vindo!</h2>
+                    <p class="form-text">Cadastre-se e tenha acesso à plataforma on-line</p>
+                    <button class="form-button form-button-light" id="open-register">Cadastrar</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="src/js/login.js"></script>
+    <script src="src/js/validarLogin.js"></script>
+</body>
+</html>

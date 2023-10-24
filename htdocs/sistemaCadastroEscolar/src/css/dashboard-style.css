@@ -1,0 +1,328 @@
+@import url('https://fonts.googleapis.com/css2?family=Gabarito&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: 'Gabarito', sans-serif;
+}
+
+:root{
+  --primary-color: #FF3131;
+  --secondary-color: #FFF;
+  --text-color-dark: #000;
+  --text-color-light: #fff;
+  --icon-color: #F3F3F3;
+  --background-color:#e2e2e2;
+}
+
+body{
+  background-color: var(--background-color);
+}
+
+.navbar-container{
+  display: flex;
+  position: fixed;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 55px;
+  top: 0;
+  left: 0;
+  background-color: #F3F3F3;
+  z-index: 2;
+  padding-left: 5rem;
+  padding-right: 2rem;
+  box-shadow: 0 5px 10px #A0A0A0;
+}
+
+.navbar-container h1{
+  font-size: 1rem;
+}
+
+.usuario-card{
+  display: flex;
+  width: 32%;
+  max-width: 200px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.usuario-img{
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.usuario{
+  font-size: 0.8rem;
+  margin-left: -20px;
+  font-weight: 300;
+}
+
+.logout-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logout{
+  display: flex;
+  justify-content: center;
+  position: relative;
+  font-size: 14px;
+  color: rgb(85, 83, 83);
+}
+
+.logout-container li{
+  list-style-type: none;
+}
+
+nav .fas{
+  position: relative;
+  font-size: 20px;
+  text-align: center;
+}
+
+.logout-container:hover{
+  background: #eee;
+  height: 55px;
+  width: 10rem;
+  border-radius: 8px;
+}
+
+.logout:hover i{
+  color: var(--primary-color);
+  transition: 0.5s;
+}
+
+main{
+  min-height: 100%;
+  padding: 5rem 2rem 2rem 5rem;
+  background-color: var(--icon-color);
+}
+
+.dashboard-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  gap: 1rem;
+  grid-template-areas: 
+  "texto-recepcao texto-recepcao texto-recepcao texto-recepcao"
+  "texto-info texto-info texto-info texto-info"
+  "info-alunos info-alunos info-escolas info-escolas"
+  "texto-acao texto-acao texto-acao texto-acao"
+  "card-cadastro-aluno card-cadastro-escola card-lista-aluno card-lista-escola"
+  "table-container table-container table-container table-container";
+  background-color: var(--secondary-color);
+  border-radius: 3px;
+}
+
+.dash-grid{
+  padding: 1rem;
+  border-radius: 14px;
+}
+
+.texto-recepcao{
+  grid-area: texto-recepcao;
+  color: var(--text-color-dark);
+}
+
+.texto-info{
+  grid-area: texto-info;
+  color: var(--text-color-dark);
+}
+
+.info-alunos{
+  grid-area: info-alunos;
+  background-color: var(--icon-color);
+  color: var(--text-color-dark);
+}
+
+.info-escolas{
+  grid-area: info-escolas;
+  background-color: var(--icon-color);
+  color: var(--text-color-dark);
+}
+
+.info-container{
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.info-container h4{
+  font-weight: 100;
+}
+
+.card-cadastro-aluno{
+  grid-area: card-cadastro-aluno;
+  background-color: var(--text-color-light);
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  color: var(--text-color-dark);
+}
+
+.card-cadastro-escola{
+  grid-area: card-cadastro-escola;
+  background-color: var(--text-color-light);
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+  color: var(--text-color-dark);
+}
+
+.card-lista-aluno{
+  grid-area: card-lista-aluno;
+  background-color: var(--text-color-light);
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+  color: var(--text-color-dark);
+}
+
+.card-lista-escola{
+  grid-area: card-lista-escola;
+  background-color: var(--text-color-light);
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+  color: var(--text-color-dark);
+}
+
+.acao-container{
+  display: grid;
+  justify-items: center;
+  padding: 0.5rem;
+}
+
+.acao-container h4{
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+
+.acao-container button{
+  width: 100%;
+  margin-top: 24px;
+  padding: 8px;
+  cursor: pointer;
+  border-radius: 10px;
+  background: transparent;
+  border: 2px solid var(--primary-color);
+}
+
+.acao-container button:hover{
+  background: var(--primary-color);
+  color: var(--secondary-color);
+  transition: 0.5s;
+}
+
+.table-container{
+  grid-area: table-container;
+  overflow-x: auto;
+}
+
+.tabela-titulo{
+  display: grid;
+}
+
+.tabela{
+  width: 100%;
+  padding: 8px;
+  margin-top: 10px;
+  background: var(--text-color-light);
+  border-radius: 10px;
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
+}
+
+.tabela table{
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 5px 5px 0 0;
+}
+
+.tabela thead{
+  background-color: var(--primary-color);
+}
+
+.tabela thead th{
+border-radius: 3px;
+  font-weight: 200;
+  justify-content: center;
+  padding-left: 8px;
+  
+}
+
+table tbody tr:nth-of-type(odd){
+  background: #f3f3f3;
+}
+
+.table-container table tr, .table-container table td{
+  padding: 0.8rem 0.2rem;
+  text-align: left;
+  min-width: 112px;
+  font-size: 14px;
+  padding-left: 8px;
+}
+
+table table tr:last-of-type{
+  border-bottom: 2px solid var(--primary-color);
+}
+
+table button{
+  text-align: center;
+  padding: 6px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid var(--primary-color);
+}
+
+table button:hover{
+  background: var(--primary-color);
+  color: #fff;
+  transition: 0.5rem;
+}
+
+.table-container table tr td:nth-child(2),
+.table-container table tr td:nth-child(3){
+  min-width: 120px;
+}
+
+@media screen and (max-width: 980px){
+  .dashboard-container{
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "texto-recepcao texto-recepcao"
+    "texto-info texto-info"
+    "info-alunos info-escolas"
+    "texto-acao texto-acao"
+    "card-cadastro-aluno card-cadastro-escola"
+    "card-lista-aluno card-lista-escola"
+    "table-container table-container"
+    ;
+  }
+  .usuario{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 480px){
+  main{
+    padding: 5rem 2rem 2rem 2rem;
+
+  }
+
+  .dashboard-container{
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "texto-recepcao"
+    "texto-info"
+    "info-alunos"
+    "info-escolas"
+    "texto-acao"
+    "card-cadastro-aluno"
+    "card-cadastro-escola"
+    "card-lista-aluno"
+    "card-lista-escola"
+    "table-container"
+    ;
+  }
+}
